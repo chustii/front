@@ -31,6 +31,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v1
+      - name: npm Install
+        run: npm install
       - name: Download build
         uses: actions/download-artifact@v1
         with:
