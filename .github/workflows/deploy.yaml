@@ -35,9 +35,9 @@ jobs:
         uses: actions/download-artifact@v1
         with:
           name: deploy_dist
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@4.0.0-beta-03
+      - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: deploy_dist
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_CHUSTI_TEST }}'
+          channelId: live
+          projectId: chusti-test
