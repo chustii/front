@@ -41,3 +41,5 @@ jobs:
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_CHUSTI_TEST }}'
           channelId: live
           projectId: chusti-test
+        env:
+         FIREBASE_CLI_EXPERIMENTS: webframeworks
