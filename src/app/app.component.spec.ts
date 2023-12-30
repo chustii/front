@@ -17,7 +17,7 @@ describe('AppComponent', () => {
   });
 
   it(`should have the 'chusti' title`, () => {
-    expect(app.title).toEqual('failed test');
+    expect(app.title).toEqual('chusti');
   });
 });
 
