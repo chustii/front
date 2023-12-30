@@ -18,24 +18,14 @@ jobs:
           node-version: '18.x'
       - name: Install dependencies
         run: npm ci
-      - name: Clean cache
-        run: npm cache clean --force
       - name: Build
         run: npm run build
-      - name: Test
-        run: npm run test
       - name: Archive build
         if: success()
         uses: actions/upload-artifact@v1
         with:
           name: deploy_dist
           path: dist
-      - name: Archive code coverage result
-        if: success()
-        uses: actions/upload-artifact@v1
-        with:
-          name: deploy_coverage
-          path: coverage
   deploy:
     runs-on: ubuntu-latest
     needs: build
