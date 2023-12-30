@@ -13,7 +13,7 @@ const config: Config = {
   // bail: 0,
 
   // The directory where Jest should store its cached dependency information
-  // cacheDirectory: "/private/var/folders/8l/4ysl3kv54b7bfmww88z3r8gc0000gn/T/jest_dx",
+  cacheDirectory: "/private/var/folders/8l/4ysl3kv54b7bfmww88z3r8gc0000gn/T/jest_dx",
 
   // Automatically clear mock calls, instances, contexts and results before every test
   clearMocks: true,
@@ -44,7 +44,14 @@ const config: Config = {
   // ],
 
   // An object that configures minimum threshold enforcement for coverage results
-  // coverageThreshold: undefined,
+  coverageThreshold: {
+    global: {
+      branches: 70
+    },
+    './src/app/ui': {
+      branches: 40
+    }
+  },
 
   // A path to a custom dependency extractor
   // dependencyExtractor: undefined,

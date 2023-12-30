@@ -1,0 +1,10 @@
+<button mat-button [color]="appearance" *ngIf="!iconOnly">
+  <mat-icon *ngIf="icon">{{icon}}</mat-icon>
+  {{text}}
+</button>
+
+<button mat-icon-button [color]="appearance" *ngIf="iconOnly">
+  <mat-icon>{{icon}}</mat-icon>
+</button>
+
+
