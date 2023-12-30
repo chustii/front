@@ -18,6 +18,8 @@ jobs:
           node-version: '18.x'
       - name: Install dependencies
         run: npm ci
+      - name: Clean cache
+        run: npm cache clean --force
       - name: Build
         run: npm run build
       - name: Test
