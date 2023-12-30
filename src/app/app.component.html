@@ -1,1 +1,4 @@
-<app-button [appearance]="ButtonTypes.PRIMARY" icon="home" [iconOnly]="true"></app-button>
+<div>
+  {{'money.cash' | translate : translateService.currentLanguage}}
+</div>
+<app-button (click)="changeLanguage()" [text]="'language.change' | translate: translateService.currentLanguage"></app-button>

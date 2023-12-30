@@ -22,7 +22,7 @@ export enum ButtonTypes {
   styleUrl: './button.component.scss'
 })
 export class ButtonComponent {
-  @Input() text = '';
+  @Input() text: string = '';
   @Input() icon = '';
   @Input() iconOnly = false;
   @Input() appearance: ButtonTypes = ButtonTypes.BASIC;
